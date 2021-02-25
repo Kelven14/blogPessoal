@@ -19,9 +19,9 @@ export class EntrarComponent implements OnInit {
 
   ngOnInit(){
     window.scroll(0,0)
-    if (environment.token != '') {
-      this.router.navigate(['/inicio'])
-    }
+      if (environment.token != '') {
+        this.router.navigate(['/inicio'])
+      }
   }
   entrar(){
     this.authService.entrar(this.userLogin).subscribe((resp:UserLogin)=>{
